@@ -7,9 +7,11 @@ class StudentsResource:
     # It is also pretty sloppy code.
     #
 
-    def __init__(self, student_file):
+    students_file = \
+        "/Users/Linhbui/cloud-computing/first_microservice/resources/old-students.json"
+
+    def __init__(self):
         self.students = None
-        self.students_file = student_file
 
         with open(self.students_file, "r") as j_file:
             self.students = json.load(j_file)
